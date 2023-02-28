@@ -2,3 +2,7 @@
 
 # dependencies
 node_modules
+.env.local
+/.pnp
+.pnp.js
+npm-debug.log*
