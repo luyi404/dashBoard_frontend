@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     mode: "dark",
-    userId: "63701cc1f03239b7f700000e", // Mock data's userId
+    userId: "63701cc1f03239c72c000184", // Mock data's userId
 };
 
 export const globalSlice = createSlice({
