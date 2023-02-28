@@ -83,7 +83,7 @@ const Navbar = (
                                 src={profileImage}
                                 height={"32px"}
                                 width={"32px"}
-                                boarderRadius={"50%"}
+                                borderRadius={"50%"}
                                 sx={{objectFit: "cover"}}
                             />
                             <Box textAlign={"left"}>
@@ -103,7 +103,7 @@ const Navbar = (
                             />
                         </Button>
                         <Menu anchorEl={anchorEl} open={isOpen} onClose={handleClose}
-                              anchorOrigin={{vertical: "bottom", horrizontal: "center"}}>
+                              anchorOrigin={{vertical: "bottom", horizontal: "center"}}>
                             <MenuItem onClick={handleClose}>Log Out</MenuItem>
                         </Menu>
                     </FlexBetween>

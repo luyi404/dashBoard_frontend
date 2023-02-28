@@ -190,7 +190,7 @@ function Sidebar({
                                 src={profileImage}
                                 height={"40px"}
                                 width={"40px"}
-                                boarderRadius={"50%"}
+                                borderRadius={"50%"}
                                 sx={{objectFit: "cover"}}
                             />
                             <Box textAlign={"left"}>
