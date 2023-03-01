@@ -26,6 +26,7 @@ const Product = ({
                  }) => {
     const theme = useTheme();
     const [isExpanded, setIsExpanded] = useState(false);
+    stat = stat[0];
 
     return (
         <Card
