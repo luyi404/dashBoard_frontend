@@ -5,7 +5,7 @@ export const api = createApi({
         baseUrl: process.env.REACT_APP_BASE_URL
     }),
     reducerPath: "adminApi",
-    tagTypes: ["User", "Product", "Customers", "Transactions", "Geography", "Sales"],
+    tagTypes: ["User", "Product", "Customers", "Transactions", "Geography", "Sales", "Admins", "Performance"],
     endpoints: (build) => ({
         getUser: build.query({
             query: (id) => `general/user/${id}`,
@@ -20,10 +20,10 @@ export const api = createApi({
             providesTags: ["Customers"],
         }),
         getTransactions: build.query({
-            query: ({ page, pageSize, sort, search }) => ({
+            query: ({page, pageSize, sort, search}) => ({
                 url: "client/transactions",
                 method: "GET",
-                params: { page, pageSize, sort, search },
+                params: {page, pageSize, sort, search},
             }),
             providesTags: ["Transactions"],
         }),
@@ -34,6 +34,14 @@ export const api = createApi({
         getSales: build.query({
             query: () => "sales/sales",
             providesTags: ["Sales"],
+        }),
+        getAdmins: build.query({
+            query: () => "management/admins",
+            providesTags: ["Admins"],
+        }),
+        getUserPerformance: build.query({
+            query: (id) => `management/performance/${id}`,
+            providesTags: ["Performance"]
         })
     })
 })
@@ -45,4 +53,6 @@ export const {
     useGetTransactionsQuery,
     useGetGeographyQuery,
     useGetSalesQuery,
+    useGetAdminsQuery,
+    useGetUserPerformanceQuery,
 } = api;
